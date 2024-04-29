@@ -34,7 +34,7 @@ def show_msg(file):
     cmd = [
         "ffmpeg",
         "-i", file,
-        "-vn"
+        "-vn" # 只包含音频流，不含视频流
     ]
     subprocess.run(cmd, check=True)
 
