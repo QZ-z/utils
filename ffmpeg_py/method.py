@@ -13,9 +13,18 @@ def transFormat(input_dir,input_file, output_dir, input_format, out_format):
     cmd = [
         "ffmpeg",
         "-i", os.path.join(input_dir,input_file),
-        "-c:a", "copy",
+        "-c:a", "copy", # 不换编码，只拷贝
+        
         # "-c:a", "libmp3lame",  # 使用 libmp3lame 编码器
         # "-q:a", "2",  # 设置 MP3 的质量，取值范围为 0-9，值越小质量越高，默认值为 4
+
+        # "-c:a", "libvorbis", # ogg的编码器
+
+        # "-c:a", "aac",  #aac
+        # "-strict", "experimental",
+
+        # "-c:a", "amr_nb", # amr
+        # "-ar", "8000",
         os.path.join(output_dir,base_file_name+"."+out_format)
     ]
 
