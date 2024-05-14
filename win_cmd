@@ -1,0 +1,2 @@
+# 控制台gpu状态循环查看
+for /L %i in (1,0,1) do (nvidia-smi | findstr /C:"Default" /C:"MiB / MiB" && timeout /t 1)
