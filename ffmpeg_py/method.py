@@ -6,8 +6,8 @@ def transFormat(input_dir,input_file, output_dir, input_format, out_format):
     
     不需要编码格式转换的直接用copy，需要编码格式转换的注意修改编码器
     """
-    indeed_format = input_dir.split(".")[-1]
-    base_file_name = input_dir.split(".")[0]
+    indeed_format = input_file.split(".")[-1]
+    base_file_name = input_file.split(".")[0]
     if input_format != indeed_format:
       raise Exception("编码格式不匹配")
     cmd = [
